@@ -18,6 +18,7 @@ ghostscript is an ocr preprocessor which convert pdfs to tif files for input int
 #### tesseract:
 tesseract performs the actual ocr on your scanned images
 
+## Download them from above 'Software Folder'  OR
 
 ## Ubuntu
 
