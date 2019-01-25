@@ -6,7 +6,6 @@ To begin install the module.
 
 After the library is installed you will need the following binaries accessible on your path to process pdfs.
 
-``` bash
 # pdftk
 pdftk splits multi-page pdf into single pages.
 
