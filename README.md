@@ -2,32 +2,44 @@
 ## Installation
 To begin install the module.
 
-> npm install pdf-extract
+> npm install -g pdf-extract
 
 After the library is installed you will need the following binaries accessible on your path to process pdfs.
 
-pdftk
-> pdftk splits multi-page pdf into single pages.
-pdftotext
-> pdftotext is used to extract text out of searchable pdf documents
-ghostscript
-> ghostscript is an ocr preprocessor which convert pdfs to tif files for input into tesseract
-tesseract
-> tesseract performs the actual ocr on your scanned images
+``` bash
+# pdftk
+pdftk splits multi-page pdf into single pages.
+
+# pdftotext
+pdftotext is used to extract text out of searchable pdf documents
+
+# ghostscript
+ghostscript is an ocr preprocessor which convert pdfs to tif files for input into tesseract
+
+# tesseract
+tesseract performs the actual ocr on your scanned images
+
 
 ## Ubuntu
-pdftk can be installed directly via apt-get
 
-> apt-get install pdftk
-pdftotext is included in the poppler-utils library. To installer poppler-utils execute
+#pdftk can be installed directly via apt-get
 
-> apt-get install poppler-utils
-ghostscript can be install via apt-get
+> sudo apt-get install pdftk
 
-> apt-get install ghostscript
-tesseract can be installed via apt-get. Note that unlike the osx install the package is called tesseract-ocr on Ubuntu, not tesseract
 
-> apt-get install tesseract-ocr
+# pdftotext is included in the poppler-utils library. To installer poppler-utils execute
+
+> sudo apt-get install poppler-utils
+
+
+# ghostscript can be install via apt-get
+
+> sudo apt-get install ghostscript
+
+
+# tesseract can be installed via apt-get. Note that unlike the osx install the package is called tesseract-ocr on Ubuntu, not tesseract
+
+> sudo apt-get install tesseract-ocr
 
 
 ## Windows
