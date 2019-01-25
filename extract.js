@@ -100,22 +100,49 @@ app.post('/segment',urlencodedParser,function(req,res){
 	"CAREER OBJECTIVE","Career Objective",
 	"AIM","Aim",
 
-	"EDUCATION",
-	"POSITIONS OF RESPONSIBILITY",
-	"ACOMPLISHMENTS",
-	"JOBS",
-	"AREAS OF INTEREST",
-	"TECHNICAL SKILLS",
-	"ACHIEVMENTS",
-	"STRENGTH",
-	"INTERNSHIP",
-	"TRAINING",
-	"PERSONAL INFORMATION",
-	"DECLARATION",
-	"HOBBIES",
-	"PROJECTS",
-	"OFFERS",
-	"EXPRIENCE"
+	"EDUCATION","Education",
+	"QUALIFICATION","Qualification",
+	"QUALIFICATIONS","Qualifications",
+
+	"POSITIONS OF RESPONSIBILITY","Positions of responsibility",
+
+	"ACOMPLISHMENTS","Acomplishments",
+
+	"JOBS","Jobs",
+
+	"AREAS OF INTEREST","Areas of interest",
+
+	"TECHNICAL SKILLS","Technical Skills","Technical skills",
+	"SKILLS","Skills",
+	"SKILL SET","Skill Set",
+
+	"ACHIEVEMENTS","Achievements",
+	"ACHIEVMENT","Achievement",
+
+	"STRENGTHS","Strengths",
+	"STRENGTH","Strength",
+
+	"INTERNSHIPS","Internships",
+	"INTERNSHIP","Internship",
+
+	"TRAININGS","Trainings",
+	"TRAINING","Training",
+
+	"PERSONAL INFORMATION","Personal Information","Personal information",
+	"PERSONAL DETAILS","Personal Details","Personal details",
+	
+	"DECLARATION","Declaration",
+	
+	"HOBBIES","Hobbies",
+	"HOBBIE","Hobbie",
+	
+	"PROJECTS","Projects",
+	
+	"OFFERS","Offers",
+	
+	"EXPERIENCES","Expereinces",
+	"EXPERIENCE","Expereince",
+	
 	];
 
 	var ini_arr1 = [];								// 'ini_arr1' holds index of keywrds
@@ -220,7 +247,7 @@ app.post('/segment',urlencodedParser,function(req,res){
 
 	res.write('------------------------------------------------------------------------------------------------------------------------');
 	res.write('<br><br>');
-	res.write('Segments--------');
+	res.write('Segments -');
 	res.write('<br><br><br>');
 	for(i=0;i<arr.length;i++)
 	{
