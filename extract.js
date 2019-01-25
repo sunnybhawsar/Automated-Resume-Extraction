@@ -69,11 +69,12 @@ app.post('/extract',urlencodedParser,function(req,res){
   res.write(text.toString());
 
 
-
+  		res.write('<center>');
   		res.write('<form action="segment" method="post">');
-		res.write('<br><br><h1>Next</h1>');
+		res.write('<br><br><br><h1>Next</h1>');
 		res.write('<input type="submit" value="Do Segments">');
 		res.write('</form>');
+		res.write('</center>');
 
   res.end();
 })
@@ -87,9 +88,18 @@ app.post('/extract',urlencodedParser,function(req,res){
 
 app.post('/segment',urlencodedParser,function(req,res){
 
+	res.writeHead(200,{'Content-Type': 'text/html'});
+	//res.write(str);
+	res.write('<br>');
+	res.write('Total length of Text : '+str.length);
+	res.write('<br><br>');
+
 
 	var ini_arr = [									// All keywords to search 'ini_arr'
-	"OBJECTIVE",
+	"OBJECTIVE","Objective",
+	"CAREER OBJECTIVE","Career Objective",
+	"AIM","Aim",
+
 	"EDUCATION",
 	"POSITIONS OF RESPONSIBILITY",
 	"ACOMPLISHMENTS",
@@ -110,19 +120,15 @@ app.post('/segment',urlencodedParser,function(req,res){
 
 	var ini_arr1 = [];								// 'ini_arr1' holds index of keywrds
 
-	res.writeHead(200,{'Content-Type': 'text/html'});
-	res.write('Okk Wait..');
-	//res.write(str);
-	
+
 	var i=0;
 	for(i=0;i<ini_arr.length;i++)
 	{
 		ini_arr1.push(str.indexOf(ini_arr[i]));			// adding index
 	}
 
-	res.write('<br><br>');
-	res.write('Total length : '+str.length);
-	res.write('<br><br>');
+	res.write('-------------------------------------------------------------------------------------------------------------------------');
+	res.write('<br><br>Show All keywords - <br><br><br>');
 	for(i=0;i<ini_arr.length;i++)
 	{
 		res.write(ini_arr[i]+" : "+ini_arr1[i]);			// show
@@ -146,6 +152,7 @@ app.post('/segment',urlencodedParser,function(req,res){
 	}
 
 
+	res.write('------------------------------------------------------------------------------------------------------------------------');
 	res.write('<br><br>');
 	res.write('Got keywords -');
 	res.write('<br><br><br>');
@@ -211,10 +218,10 @@ app.post('/segment',urlencodedParser,function(req,res){
 		}
 	}
 
-
-	res.write('<br><br><br>');
-	res.write('Segments--------');
+	res.write('------------------------------------------------------------------------------------------------------------------------');
 	res.write('<br><br>');
+	res.write('Segments--------');
+	res.write('<br><br><br>');
 	for(i=0;i<arr.length;i++)
 	{
 		res.write(i+") "+arr[i]+" : <br>");				// showing segments sequentially
