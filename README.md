@@ -6,16 +6,16 @@ To begin install the module.
 
 After the library is installed you will need the following binaries accessible on your path to process pdfs.
 
-### pdftk
+#### pdftk
 pdftk splits multi-page pdf into single pages.
 
-### pdftotext
+#### pdftotext
 pdftotext is used to extract text out of searchable pdf documents
 
-### ghostscript
+#### ghostscript
 ghostscript is an ocr preprocessor which convert pdfs to tif files for input into tesseract
 
-### tesseract
+#### tesseract
 tesseract performs the actual ocr on your scanned images
 
 
