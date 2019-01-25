@@ -6,37 +6,37 @@ To begin install the module.
 
 After the library is installed you will need the following binaries accessible on your path to process pdfs.
 
-# pdftk
+### pdftk
 pdftk splits multi-page pdf into single pages.
 
-# pdftotext
+### pdftotext
 pdftotext is used to extract text out of searchable pdf documents
 
-# ghostscript
+### ghostscript
 ghostscript is an ocr preprocessor which convert pdfs to tif files for input into tesseract
 
-# tesseract
+### tesseract
 tesseract performs the actual ocr on your scanned images
 
 
 ## Ubuntu
 
-#pdftk can be installed directly via apt-get
+pdftk can be installed directly via apt-get
 
 > sudo apt-get install pdftk
 
 
-# pdftotext is included in the poppler-utils library. To installer poppler-utils execute
+ pdftotext is included in the poppler-utils library. To installer poppler-utils execute
 
 > sudo apt-get install poppler-utils
 
 
-# ghostscript can be install via apt-get
+ ghostscript can be install via apt-get
 
 > sudo apt-get install ghostscript
 
 
-# tesseract can be installed via apt-get. Note that unlike the osx install the package is called tesseract-ocr on Ubuntu, not tesseract
+tesseract can be installed via apt-get. Note that unlike the osx install the package is called tesseract-ocr on Ubuntu, not tesseract
 
 > sudo apt-get install tesseract-ocr
 
