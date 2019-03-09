@@ -25,7 +25,7 @@ app.post('/upload',urlencodedParser,function(req,res){		// 2nd page uploading
 	var form = new formidable.IncomingForm();
 		form.parse(req,function(err,fields,files){
 			var oldpath = files.filetoupload.path;
-			var newpath = 'C:/nodejs/uploads/'+files.filetoupload.name;
+			var newpath = 'C:\Users\hp\Desktop\a\Automated-Resume-Extraction-master'+files.filetoupload.name;
 			namee = files.filetoupload.name;
 
 			fs.rename(oldpath,newpath,function(err){
@@ -105,9 +105,10 @@ app.post('/segment',urlencodedParser,function(req,res){
 	"QUALIFICATIONS","Qualifications",
 
 	"POSITIONS OF RESPONSIBILITY","Positions of responsibility",
-
+    "CERTIFICATION","Certification",
 	"ACOMPLISHMENTS","Acomplishments",
-
+    "VOLUNTEER WORK","Volunteer Work",
+    "EXTRA CURRICULAR ACTIVITIES","Extra Curricular Activities",
 	"JOBS","Jobs",
 
 	"AREAS OF INTEREST","Areas of interest",
@@ -178,7 +179,50 @@ app.post('/segment',urlencodedParser,function(req,res){
 		arr1.push(str.indexOf(arr[i]));
 	}
 
+// changes to be done starts here-suraj
 
+function sortNumber(a,b) {
+	return a - b;
+}
+var myarr=[];
+for(i=0;i<arr1.length;i++)
+	{
+		myarr.push(arr1[i]);
+	
+	}
+	myarr.sort(sortNumber);
+var k=0;
+var sarr=[];//will keep keywords
+var sarr1=[];//will keep index of keywords
+for(i=0;i<myarr.length;i++)
+	{
+		k=arr1.indexOf(myarr[i]);
+		sarr.push(arr[k]);
+		sarr1.push(arr1[k]);
+	
+	}
+var sarr2=[];//holds segment data
+var z=0;var tmp="";
+for(i=0;i<myarr.length-1;i++)
+	{ z = sarr[i].length;
+		tmp = str.slice(sarr1[i]+z,sarr1[i+1]);
+		sarr2.push(tmp);
+	}
+	z = sarr[myarr.length-1].length;
+	tmp=str.slice(sarr1[myarr.length-1]+z,str.length);
+	sarr2.push(tmp);
+	res.write('------------------------------------------------------------------------------------------------------------------------');
+	res.write('<br><br>');
+	res.write('Segments -');
+	res.write('<br><br><br>');
+	for(i=0;i<arr.length;i++)
+	{
+		res.write(i+") "+sarr[i]+" : <br>");				// showing segments sequentially
+		res.write(sarr2[i]);
+		res.write('<br><br><br>');
+	}
+
+//ends here-suraj
 	res.write('------------------------------------------------------------------------------------------------------------------------');
 	res.write('<br><br>');
 	res.write('Got keywords -');
@@ -244,6 +288,11 @@ app.post('/segment',urlencodedParser,function(req,res){
 		arr2.push(tmp);
 		}
 	}
+
+
+
+
+
 
 	res.write('------------------------------------------------------------------------------------------------------------------------');
 	res.write('<br><br>');
