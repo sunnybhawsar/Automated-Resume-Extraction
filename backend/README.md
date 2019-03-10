@@ -6,16 +6,16 @@ To begin install the dependencies.
 
 After the dependency installation you will need the following binaries accessible on your path to process pdfs.
 
-#### pdf-extract:
-pdf-extract is used to extract text out of searchable pdf documents
+#### pdf-to-text:
+pdf-to-text is used to extract text out of searchable pdf documents
 
-> npm install -g pdf-extract
+> npm install -g pdf-to-text
 
-## Download library from above 'Software Folder'  OR
+## Download library from above 'Software Folder' for windows  OR
 
 ## Ubuntu
 
- pdf-extract is included in the poppler-utils library. To installer poppler-utils execute
+ pdf-to-text is included in the poppler-utils library. To installer poppler-utils execute
 
 > sudo apt-get install poppler-utils
 
