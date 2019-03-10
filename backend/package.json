@@ -2,7 +2,7 @@
   "name": "resumeextraction",
   "version": "1.0.0",
   "description": "Automated Resume Extraction System",
-  "main": "extract2.js",
+  "main": "extract.js",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
